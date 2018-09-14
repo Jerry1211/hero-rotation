@@ -343,7 +343,7 @@ local function APL()
   end
   if Everyone.TargetIsValid() then
     -- charge
-    if S.Charge:IsCastableP() then
+    if S.Charge:IsCastableP() and Target:IsInRange(S.Charge) then
       if HR.Cast(S.Charge, Settings.Arms.GCDasOffGCD.Charge) then return ""; end
     end
     -- auto_attack
